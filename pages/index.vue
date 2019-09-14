@@ -1,7 +1,8 @@
 <template>
-  <div class="container index">
+  <div class="container index" :class="isLight ? 'container--light' : 'container--dark'">
     <div class="content">
-      <h1>Movies</h1>
+      <logo :is-light="isLight"></logo>
+      <h2>Movies</h2>
       <ul>
         <li v-for="movie in entries" :key="movie.id">
           <NuxtLink :to="`movie/${movie.id}`">
@@ -14,6 +15,7 @@
           About page
         </NuxtLink>
       </p>
+      <switch-button @click="isLight = !isLight" :text="isLight ? 'Turn off' : 'Turn on'"></switch-button>
     </div>
     <div class="frame"></div>
   </div>
@@ -21,6 +23,8 @@
 
 <script>
 import allMovies from '~/apollo/queries/allMovies'
+import Logo from '../components/Logo'
+import SwitchButton from '../components/SwitchButton'
 
 export default {
   apollo: {
@@ -32,10 +36,19 @@ export default {
   head: {
     title: 'Movies with Apollo'
   },
+  components: {
+    SwitchButton,
+    Logo
+  },
   transition() {
     return {
       name: 'slide',
       mode: ''
+    }
+  },
+  data() {
+    return {
+      isLight: true
     }
   }
 }
