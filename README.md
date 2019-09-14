@@ -1,4 +1,4 @@
-# frankenstein
+# frank-app
 
 > A website made out of Nuxt.js + GraphQL + Apollo + CraftCMS
 
