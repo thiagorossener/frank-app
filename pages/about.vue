@@ -37,16 +37,6 @@ export default {
 
 <style lang="scss">
 .about {
-  // .frame {
-  //   width: 400px;
-  //   height: 400px;
-  //   background-color: blue;
-  //   position: absolute;
-  //   bottom: 0;
-  //   right: 0;
-  //   transition: all 1s;
-  // }
-
   .description {
     margin: 20px 0;
     text-align: center;
