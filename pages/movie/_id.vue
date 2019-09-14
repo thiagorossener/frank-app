@@ -1,8 +1,10 @@
 <template>
   <div class="container" v-if="entries && entries.length">
     <div class="content">
-      <h3>{{ entries[0].title }}</h3>
-      <p>{{ entries[0].description }}</p>
+      <h3 class="title">{{ entries[0].title }}</h3>
+
+      <p class="description">{{ entries[0].description }}</p>
+
       <p>
         <nuxt-link to="/" class="link">
           Home page
@@ -40,6 +42,15 @@ export default {
 </script>
 
 <style>
+.title {
+  text-align: center;
+}
+
+.description {
+  text-align: center;
+  margin: 20px 0;
+}
+
 .link {
   display: inline-block;
   margin-top: 40px;
