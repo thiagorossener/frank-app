@@ -1,7 +1,6 @@
 {
   entries {
-    id
-    dateCreated @formatDateTime (format: "Y-m-d")
+    slug
     title
     ... on movie_post_Entry {
       description

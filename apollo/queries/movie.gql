@@ -1,5 +1,5 @@
-query Movie($id: [Int]) {
-  entries(id: $id) {
+query Movie($slug: [String]) {
+  entries(slug: $slug) {
     title
     ... on movie_post_Entry {
       description

@@ -1,7 +1,7 @@
 <template>
   <ul class="movies-list" :class="isLight ? 'movies-list--dark' : 'movies-list--light'">
-    <li class="movies-list__item" v-for="movie in entries" :key="movie.id">
-      <nuxt-link :to="`movie/${movie.id}`">
+    <li class="movies-list__item" v-for="movie in entries" :key="movie.slug">
+      <nuxt-link :to="`movie/${movie.slug}`">
         {{ movie.title }}
       </nuxt-link>
     </li>

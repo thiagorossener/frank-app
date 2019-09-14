@@ -21,9 +21,9 @@ export default {
   apollo: {
     entries: {
       query: movie,
-      prefetch: ({ route }) => ({ id: route.params.id }),
+      prefetch: ({ route }) => ({ slug: route.params.slug }),
       variables () {
-        return { id: this.$route.params.id }
+        return { slug: this.$route.params.slug }
       }
     }
   },

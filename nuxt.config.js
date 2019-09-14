@@ -64,13 +64,13 @@ export default {
 
       const query = `{
           entries {
-            id
+            slug
           }
         }`;
 
       return apolloFetch({ query })
         .then(result => {
-          return result.data.entries.map(movie => `/movie/${movie.id}`);
+          return result.data.entries.map(movie => `/movie/${movie.slug}`);
         })
         .catch(error => {
           console.error(error);
