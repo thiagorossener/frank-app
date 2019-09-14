@@ -13,13 +13,15 @@
 
       <switch-button @click="isLight = !isLight" :text="isLight ? 'Turn off' : 'Turn on'"></switch-button>
     </div>
-    <div class="frame"></div>
+
+    <notification>Aaarrghh! This is a notification</notification>
   </div>
 </template>
 
 <script>
 import Logo from '../components/Logo'
 import MoviesList from '../components/MoviesList'
+import Notification from '../components/Notification'
 import SwitchButton from '../components/SwitchButton'
 
 export default {
@@ -29,6 +31,7 @@ export default {
   components: {
     SwitchButton,
     MoviesList,
+    Notification,
     Logo
   },
   transition() {
@@ -44,15 +47,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.index .frame {
-  position: absolute;
-  width: 600px;
-  height: 300px;
-  background-color: red;
-  top: 0;
-  left: 0;
-  transition: all 1s;
-}
-</style>

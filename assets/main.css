@@ -22,6 +22,7 @@ ul {
   height: 100vh;
   width: 100%;
   transition: all 1s;
+  overflow: hidden;
 }
 
 .container--light {
@@ -61,18 +62,4 @@ ul {
 
 .slide-enter .content {
   transform: translateY(-100%);
-}
-
-/* Index page */
-
-.index.slide-enter .frame,
-.index.slide-leave-active .frame {
-  transform: translate(-100%, -100%);
-}
-
-/* About page */
-
-.about.slide-enter .frame,
-.about.slide-leave-active .frame {
-  transform: translate(100%, 100%);
 }
