@@ -27,32 +27,36 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .movies-list {
   margin: 20px 0;
   min-width: 400px;
 }
 
-.movies-list__item a {
-  display: block;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 5px 0;
-  margin: 10px 0;
+.movies-list--light {
+  .movies-list__item a {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+  }
 }
 
-.movies-list--light > .movies-list__item a {
-  color: #fff;
-  border-bottom: 2px solid #fff;
+.movies-list--dark {
+  .movies-list__item a {
+    color: #000;
+    border-bottom: 2px solid #000;
+  }
 }
 
-.movies-list--dark > .movies-list__item a {
-  color: #000;
-  border-bottom: 2px solid #000;
-}
+  .movies-list__item a {
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 0;
+    margin: 10px 0;
 
-.movies-list__item a:hover {
-  color: #1dc278;
-  border-color: #1dc278;
-}
+    &:hover {
+      color: #1dc278;
+      border-color: #1dc278;
+    }
+  }
 </style>

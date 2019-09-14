@@ -13,7 +13,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .switch-button {
   background-color: #fff;
   border: 2px solid #000;
