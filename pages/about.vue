@@ -2,7 +2,7 @@
   <div class="container about">
     <div class="content">
       <h1>About</h1>
-      <p>This is an experimental website, nothing else.</p>
+      <p class="description">Frank is a website made out of Nuxt.js that uses Apollo to fetch data with GraphQL from a headless Craft CMS. Ufhh!</p>
       <nuxt-link to="/" class="link">
         Home page
       </nuxt-link>
@@ -13,6 +13,9 @@
 
 <script>
 export default {
+  head: {
+    title: 'About Frank'
+  },
   transition() {
     return {
       name: 'slide',
@@ -22,19 +25,26 @@ export default {
 }
 </script>
 
-<style>
-.about .frame {
-  width: 400px;
-  height: 400px;
-  background-color: blue;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  transition: all 1s;
-}
+<style lang="scss">
+.about {
+  .frame {
+    width: 400px;
+    height: 400px;
+    background-color: blue;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all 1s;
+  }
 
-.link {
-  display: inline-block;
-  margin-top: 40px;
+  .description {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .link {
+    display: inline-block;
+    margin-top: 40px;
+  }
 }
 </style>
