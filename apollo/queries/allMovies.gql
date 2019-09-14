@@ -1,0 +1,10 @@
+{
+  entries {
+    id
+    dateCreated @formatDateTime (format: "Y-m-d")
+    title
+    ... on movie_post_Entry {
+      description
+    }
+  }
+}

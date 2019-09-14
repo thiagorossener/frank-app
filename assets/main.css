@@ -1,0 +1,44 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  transition: all 1s;
+}
+
+.container .content {
+  font-size: 20px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  transition: all 1.5s;
+}
+
+.slide-leave-active .content {
+  transform: translateY(100%);
+  transition: transform 4s, opacity 1s;
+  opacity: 0;
+}
+
+.slide-enter .content {
+  transform: translateY(-100%);
+}
+
+/* Index page */
+
+.index.slide-enter .frame,
+.index.slide-leave-active .frame {
+  transform: translate(-100%, -100%);
+}
+
+/* About page */
+
+.about.slide-enter .frame,
+.about.slide-leave-active .frame {
+  transform: translate(100%, 100%);
+}

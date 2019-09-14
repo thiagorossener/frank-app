@@ -1,0 +1,8 @@
+query Movie($id: [Int]) {
+  entries(id: $id) {
+    title
+    ... on movie_post_Entry {
+      description
+    }
+  }
+}
