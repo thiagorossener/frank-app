@@ -4,9 +4,9 @@
       <h3>{{ entries[0].title }}</h3>
       <p>{{ entries[0].description }}</p>
       <p>
-        <NuxtLink to="/">
+        <nuxt-link to="/" class="link">
           Home page
-        </NuxtLink>
+        </nuxt-link>
       </p>
     </div>
   </div>
@@ -38,3 +38,10 @@ export default {
   }
 }
 </script>
+
+<style>
+.link {
+  display: inline-block;
+  margin-top: 40px;
+}
+</style>

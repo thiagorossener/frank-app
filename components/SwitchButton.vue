@@ -20,7 +20,7 @@ export default {
   padding: 10px 15px;
   font-size: 16px;
   font-weight: bold;
-  margin: 20px 0;
+  margin: 40px 0;
   cursor: pointer;
 }
 </style>

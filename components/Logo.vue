@@ -1,5 +1,8 @@
 <template>
-  <h1 class="logo" :class="isLight ? 'logo--dark' : 'logo--light'">Frankenstein</h1>
+  <div class="logo">
+    <img src="~/assets/imgs/frank.svg" width="80">
+    <h1 class="logo__text" :class="isLight ? 'logo__text--dark' : 'logo__text--light'">Frank's</h1>
+  </div>
 </template>
 
 <script>
@@ -15,15 +18,19 @@ export default {
 
 <style>
 .logo {
+  text-align: center;
+}
+
+.logo__text {
   font-size: 40px;
   text-transform: uppercase;
 }
 
-.logo--light {
+.logo__text--light {
   color: #fff;
 }
 
-.logo--dark {
+.logo__text--dark {
   color: #000;
 }
 </style>

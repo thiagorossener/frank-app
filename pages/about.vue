@@ -1,10 +1,11 @@
 <template>
   <div class="container about">
     <div class="content">
-      <h1>About page</h1>
-      <NuxtLink to="/">
+      <h1>About</h1>
+      <p>This is an experimental website, nothing else.</p>
+      <nuxt-link to="/" class="link">
         Home page
-      </NuxtLink>
+      </nuxt-link>
     </div>
     <div class="frame"></div>
   </div>
@@ -30,5 +31,10 @@ export default {
   bottom: 0;
   right: 0;
   transition: all 1s;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 40px;
 }
 </style>

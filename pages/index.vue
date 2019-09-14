@@ -2,19 +2,15 @@
   <div class="container index" :class="isLight ? 'container--light' : 'container--dark'">
     <div class="content">
       <logo :is-light="isLight"></logo>
-      <h2>Movies</h2>
-      <ul>
-        <li v-for="movie in entries" :key="movie.id">
-          <NuxtLink :to="`movie/${movie.id}`">
-            {{ movie.dateCreated }} {{ movie.title }}
-          </NuxtLink>
-        </li>
-      </ul>
+
+      <h2>Movies List</h2>
+
+      <movies-list :is-light="isLight"></movies-list>
+
       <p>
-        <NuxtLink to="/about">
-          About page
-        </NuxtLink>
+        <nuxt-link to="/about">About</nuxt-link>
       </p>
+
       <switch-button @click="isLight = !isLight" :text="isLight ? 'Turn off' : 'Turn on'"></switch-button>
     </div>
     <div class="frame"></div>
@@ -22,22 +18,17 @@
 </template>
 
 <script>
-import allMovies from '~/apollo/queries/allMovies'
 import Logo from '../components/Logo'
+import MoviesList from '../components/MoviesList'
 import SwitchButton from '../components/SwitchButton'
 
 export default {
-  apollo: {
-    entries: {
-      prefetch: true,
-      query: allMovies
-    }
-  },
   head: {
-    title: 'Movies with Apollo'
+    title: 'Frank\'s Website'
   },
   components: {
     SwitchButton,
+    MoviesList,
     Logo
   },
   transition() {
@@ -55,22 +46,6 @@ export default {
 </script>
 
 <style>
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-}
-
-a {
-  text-decoration: none;
-  color: #3498DB;
-}
-
-a:hover {
-  border-bottom: 1px solid;
-}
-
 .index .frame {
   position: absolute;
   width: 600px;
